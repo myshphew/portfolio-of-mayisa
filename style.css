@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+    font-family: 'EBGaramond-normal', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fffaf0;
+    color: #222;
+}
+
+.container {
+    width: 1080px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;       
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: 'Brotherlandsignature-bold';
+    src: url('fonts/BrotherlandsignatureBold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'EBGaramond-normal';
+    src: url('fonts/EBGaramond-normal.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'EBGaramond-italic';
+    src: url('fonts/EBGaramond-italic.ttf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+
+
+/* Navbar container */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+}
+
+/* Essentials */
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0;
+}
+h1 {
+    font-size: 2.5em;
+    color: #8B7E74;
+}
+h2 {
+    font-size: 1.8em;
+    color: #8B7E74;
+}
+p {
+    font-size: 1.1em;
+    text-align: justify;
+    margin-bottom: 8px;
+}
+
+/* Wrapper to hold section + stamps */
+
+.wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 24px;
+  margin-top: 24px;
+}
+
+/* Letter cover style profile section */
+
+.profile-section {
+    display: flex;
+    flex-direction: row;  
+    align-items: center;   
+    gap: 36px;         
+    margin: 0;
+    padding: 36px 36px;
+    border: 2px solid #8B7E74;
+    border-radius: 16px;
+    transform: rotate(-1.5deg);
+    background: #fdfbf7;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+
+    /* Subtle diagonal lines like envelope texture */
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(139, 126, 116, 0.05),
+        rgba(139, 126, 116, 0.05) 6px,
+        transparent 6px,
+        transparent 12px
+    );
+}
+
+/* Stamps styling */
+
+.stamp {
+  position: absolute;
+  width: 144px;
+  height: 144px;
+  object-fit:scale-down ;
+  object-position: center;
+  opacity: 0.85;
+  transform: rotate(-8deg);
+}
+
+/* Different stamp placements */
+
+.stamp1 {
+    width: 196px;
+    height: 196px;
+    top: 32px;
+    right: 25px;
+}
+
+.stamp2 {
+  bottom: 10px;
+  left: 620px;
+  transform: rotate(12deg);
+}
+
+.stamp3 {
+    width: 256px;
+    height: 256px;
+    bottom: 10px;
+    left: 500px;
+    transform: rotate(-12deg);
+}
+
+/* Profile section Styling */
+
+h1.the-canvas-of-SN {
+    font-size: 2.5em;
+    font-family: 'EBGaramond-normal';
+    text-align: center;
+    color: #5C4A3D;
+    margin: 0;
+}
+
+.fill-img {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 16px;
+
+}
+
+h2.about-me-title {
+    font-size: 2.5em;
+    font-family: 'Brotherlandsignature-bold';
+    color: #5C4A3D;
+    margin: 0;
+}
+
+p.about-me-text {
+    font-size: 1.2em;
+    text-align: justify;
+    margin: 0;
+}
+
+/* Gallery section Styling */
+
+h2.gallery {
+    font-size: 2.5em;
+    font-family: 'Brotherlandsignature-bold';
+    color: #5C4A3D;
+    padding: 16px;
+    text-align: center;
+}
+
+.username {
+    font-size: .8em;
+    font-family: 'EBGaramond-normal';
+    color: #5C4A3D;
+    margin: 0;
+    text-decoration: none;
+}
+
+.username:hover {
+    color: #5C4A3D;        
+    text-decoration: none; 
+}
+
+/* Bento Section */
+
+.bento-container {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.bento-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bento-square {
+    flex: 0 0 auto;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.bento-rect {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 264px;
+    aspect-ratio: 2 / 1;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.bento-small-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.bento-small-grid .bento-square {
+    flex: 1 1 0;
+}
+
+img.bento {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0;
+}
+
+/* Footer Section */
+
+.footer {
+    color: #5C4A3D;              
+    text-align: center;
+    padding: 8px;
+    font-size: 0.9em;
+    margin-top: 24px;
+  }
+  
+.footer .heart {
+    color: #e25555; /* red heart */
+    font-size: 1.1em;
+}  
